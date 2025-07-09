@@ -6,6 +6,9 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod';
 import { env } from './env.ts';
+import { createQuestionRoute } from './http/routes/create-question.ts';
+import { createRoomsRoute } from './http/routes/create-room.ts';
+import { getRoomsQuestionsRoute } from './http/routes/get-room-questions.ts';
 import { getRoomsRoute } from './http/routes/get-rooms.ts';
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
@@ -22,8 +25,11 @@ app.get('/health', () => {
 });
 
 app.register(getRoomsRoute);
+app.register(createRoomsRoute);
+app.register(getRoomsQuestionsRoute);
+app.register(createQuestionRoute);
 
 app.listen({ port: env.PORT }).then(() => {
-  console.log(`Port:  http://localhost:${env.PORT}`);
-  console.log('HTTP server running!');
+  // biome-ignore lint/suspicious/noConsole: server running alert
+  console.log(`Server is running at http://localhost:${env.PORT}`);
 });

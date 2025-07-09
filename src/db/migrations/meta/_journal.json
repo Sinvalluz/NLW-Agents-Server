@@ -8,6 +8,13 @@
       "when": 1751980477914,
       "tag": "0000_clever_stepford_cuckoos",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752061838190,
+      "tag": "0001_tired_spiral",
+      "breakpoints": true
     }
   ]
 }
