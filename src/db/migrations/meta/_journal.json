@@ -15,6 +15,13 @@
       "when": 1752061838190,
       "tag": "0001_tired_spiral",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752279314960,
+      "tag": "0002_nosy_imperial_guard",
+      "breakpoints": true
     }
   ]
 }
